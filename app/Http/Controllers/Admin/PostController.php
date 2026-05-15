@@ -3,18 +3,20 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
-class TagController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $tags = Tag::paginate(10);
-        return view('admin.tags.index', compact('tags'));
+        $posts = Post::paginate(20);
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
@@ -22,7 +24,9 @@ class TagController extends Controller
      */
     public function create()
     {
-        return view('admin.tags.create');
+        $categories = Category::pluck('title', 'id')->all();
+        $tags = Tag::pluck('title', 'id')->all();
+        return view('admin.posts.create', compact('categories', 'tags'));
     }
 
     /**
@@ -34,9 +38,9 @@ class TagController extends Controller
             'title' => 'required',
         ]);
 
-        Tag::create($request->all());
+        Post::create($request->all());
 
-        return redirect()->route('tags.index')->with('success', 'Тэг добавлен');
+        return redirect()->route('posts.index')->with('success', 'Статья добавлена');
     }
 
     /**
@@ -52,8 +56,7 @@ class TagController extends Controller
      */
     public function edit($id)
     {
-        $tag = Tag::find($id);
-        return view('admin.tags.edit', compact('tag'));
+        return view('admin.posts.edit');
     }
 
     /**
@@ -65,11 +68,7 @@ class TagController extends Controller
             'title' => 'required',
         ]);
 
-        $tag = Tag::find($id);
-        $tag->slug = null;
-        $tag->update($request->all());
-
-        return redirect()->route('tags.index')->with('success', 'Изменения сохранены');
+        return redirect()->route('posts.index')->with('success', 'Изменения сохранены');
     }
 
     /**
@@ -77,10 +76,9 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        $tag = Tag::find($id);
-        $tag->delete();
-        Tag::destroy($id);
+        $post = Post::find($id);
+        $post->delete();
 
-        return redirect()->route('tags.index')->with('success', 'Категория удалена');
+        return redirect()->route('posts.index')->with('success', 'Статья удалена');
     }
 }

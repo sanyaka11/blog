@@ -10,6 +10,9 @@ class Post extends Model
 {
     use Sluggable;
     use HasFactory;
+
+    protected $fillable = ['title', 'slug', 'description', 'content', 'category_id', 'thumbnail', 'views'];
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
@@ -20,8 +23,7 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
-
-    public function sluggable():array
+    public function sluggable(): array
     {
         return [
             'slug' => [
