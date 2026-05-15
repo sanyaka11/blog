@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-< lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/adminlte.min.css') }}">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -211,16 +211,41 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="{{ route('categories.index') }}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="far fa-list-alt  nav-icon"></i>
                                         <p>Список категорий</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('categories.create') }}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="far fa-edit nav-icon"></i>
                                         <p>Новая категория</p>
                                     </a>
                                 </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-tags"></i>
+                                <p>
+                                    Теги
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('tags.index') }}" class="nav-link">
+                                        <i class="far fa-list-alt  nav-icon"></i>
+                                        <p>Список тегов</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('tags.create') }}" class="nav-link">
+                                        <i class="fa fa-edit nav-icon"></i>
+                                        <p>Новый тег</p>
+                                    </a>
+                                </li>
+
                             </ul>
                         </li>
 
@@ -265,7 +290,7 @@
         <!-- Content Wrapper. Contains page content -->
         @yield('content')
         <!-- /.content-wrapper -->
-        
+
 
         <footer class="main-footer">
             <div class="float-right d-none d-sm-block">
@@ -289,5 +314,7 @@
     <!-- AdminLTE App -->
     <script src="{{ asset('assets/js/adminlte.min.js') }}"></script>
     <!-- AdminLTE demo (можно убрать на production) -->
-    <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
+    <script src="{{ asset('assets/js/demo.js') }}"></script>
 </body>
+
+</html>
