@@ -12,7 +12,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('assets/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
+    @yield('styles')
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -241,11 +242,35 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('tags.create') }}" class="nav-link">
-                                        <i class="fa fa-edit nav-icon"></i>
+                                        <i class="far fa-edit nav-icon"></i>
                                         <p>Новый тег</p>
                                     </a>
                                 </li>
 
+                            </ul>
+                        </li>
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>
+                                    Статьи
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('posts.index') }}" class="nav-link">
+                                        <i class="far fa-list-alt nav-icon"></i>
+                                        <p>Список статей</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('posts.create') }}" class="nav-link">
+                                        <i class="far fa-edit nav-icon"></i>
+                                        <p>Новая статья</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
 
@@ -312,9 +337,10 @@
     <!-- Bootstrap 4 -->
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
-    <script src="{{ asset('assets/js/adminlte.min.js') }}"></script>
+    <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
     <!-- AdminLTE demo (можно убрать на production) -->
-    <script src="{{ asset('assets/js/demo.js') }}"></script>
+    <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
+    @yield('scripts')
 </body>
 
 </html>

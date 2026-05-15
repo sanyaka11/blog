@@ -38,10 +38,10 @@ class Post extends Model
     {
         if ($request->hasFile('thumbnail')) {
             if ($image) {
-                Storage::delete($image);
+                Storage::disk('public')->delete($image);
             }
             $folder = date('Y-m-d');
-            return $request->file('thumbnail')->store("images/{$folder}");
+            return $request->file('thumbnail')->store("images/{$folder}", 'public');
         }
         return null;
     }
