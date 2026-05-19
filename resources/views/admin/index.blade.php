@@ -38,7 +38,32 @@
                 </div>
             </div>
             <div class="card-body">
-                Start creating your amazing application!
+                <div class="row">
+                    <div class="col-lg-3 col-6">
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                <h3>{{ $stats['categories'] }}</h3>
+                                <p>Категорий</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="small-box bg-warning">
+                            <div class="inner">
+                                <h3>{{ $stats['tags'] }}</h3>
+                                <p>Тегов</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3>{{ $stats['posts'] }}</h3>
+                                <p>Статей</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- /.card-body -->
             <div class="card-footer">

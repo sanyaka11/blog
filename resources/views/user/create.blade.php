@@ -36,8 +36,12 @@
 
         <div class="row">
             <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block">Register</button>
+                <button type="submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
             </div>
+        </div>
+        
+        <div class="text-center mt-3">
+            <a href="{{ route('login.create') }}">Уже есть аккаунт? <strong>Войти</strong></a>
         </div>
     </form>
 </div>
