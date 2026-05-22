@@ -3,7 +3,8 @@
 use App\Http\Controllers\Admin\MainController;
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\PostController as AdminPostController;
-use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\TagController as AdminTagController;
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
@@ -25,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function() {
     Route::get('/', [MainController::class, 'index'])->name('admin.index');
     Route::resource('/categories', AdminCategoryController::class);
-    Route::resource('/tags', TagController::class);
+    Route::resource('/tags', AdminTagController::class);
     Route::resource('posts', AdminPostController::class);
 });
 
@@ -41,3 +42,4 @@ Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('/article/{slug}', [PostController::class, 'show'])->name('posts.single');
 Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('categories.single');
+Route::get('/tag/{slug}', [TagController::class, 'show'])->name('tags.single');
