@@ -22,25 +22,25 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet"> 
     
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="{{ asset('assets/markedia/css/bootstrap.css') }}" rel="stylesheet">
 
     <!-- FontAwesome Icons core CSS -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/markedia/css/font-awesome.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
+    <link href="{{ asset('assets/markedia/style.css') }}" rel="stylesheet">
 
     <!-- Animate styles for this template -->
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="{{ asset('assets/markedia/css/animate.css') }}" rel="stylesheet">
 
     <!-- Responsive styles for this template -->
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="{{ asset('assets/markedia/css/responsive.css') }}" rel="stylesheet">
 
     <!-- Colors for this template -->
-    <link href="css/colors.css" rel="stylesheet">
+    <link href="{{ asset('assets/markedia/css/colors.css') }}" rel="stylesheet">
 
     <!-- Version Marketing CSS for this template -->
-    <link href="css/version/marketing.css" rel="stylesheet">
+    <link href="{{ asset('assets/markedia/css/version/marketing.css') }}" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -57,7 +57,7 @@
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="marketing-index.html"><img src="images/version/market-logo.png" alt=""></a>
+                    <a class="navbar-brand" href="marketing-index.html"><img src="{{ asset('assets/markedia/images/version/market-logo.png') }}" alt="market-logo"></a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
@@ -116,7 +116,7 @@
                                 <div class="blog-box wow fadeIn">
                                     <div class="post-media">
                                         <a href="marketing-single.html" title="">
-                                            <img src="upload/market_blog_01.jpg" alt="" class="img-fluid">
+                                            <img src="{{ asset('assets/markedia/upload/market_blog_01.jpg') }}" alt="market_blog_01" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
                                             </div>
@@ -146,7 +146,7 @@
                                 <div class="blog-box wow fadeIn">
                                     <div class="post-media">
                                         <a href="marketing-single.html" title="">
-                                            <img src="upload/market_blog_02.jpg" alt="" class="img-fluid">
+                                            <img src="{{ asset('assets/markedia/upload/market_blog_02.jpg') }}" alt="market_blog_02" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
                                             </div>
@@ -176,7 +176,7 @@
                                 <div class="blog-box wow fadeIn">
                                     <div class="post-media">
                                         <a href="marketing-single.html" title="">
-                                            <img src="upload/market_blog_03.jpg" alt="" class="img-fluid">
+                                            <img src="{{ asset('assets/markedia/upload/market_blog_03.jpg') }}" alt="market_blog_03" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
                                             </div>
@@ -206,7 +206,7 @@
                                 <div class="blog-box wow fadeIn">
                                     <div class="post-media">
                                         <a href="marketing-single.html" title="">
-                                            <img src="upload/market_blog_04.jpg" alt="" class="img-fluid">
+                                            <img src="{{ asset('assets/markedia/upload/market_blog_04.jpg') }}" alt="market_blog_04" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
                                             </div>
@@ -236,7 +236,7 @@
                                 <div class="blog-box wow fadeIn">
                                     <div class="post-media">
                                         <a href="marketing-single.html" title="">
-                                            <img src="upload/market_blog_05.jpg" alt="" class="img-fluid">
+                                            <img src="{{ asset('assets/markedia/upload/market_blog_05.jpg') }}" alt="market_blog_05" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
                                             </div>
@@ -266,7 +266,7 @@
                                 <div class="blog-box wow fadeIn">
                                     <div class="post-media">
                                         <a href="marketing-single.html" title="">
-                                            <img src="upload/market_blog_06.jpg" alt="" class="img-fluid">
+                                            <img src="{{ asset('assets/markedia/upload/market_blog_06.jpg') }}" alt="market_blog_06" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
                                             </div>
@@ -319,7 +319,7 @@
                                     <div class="list-group">
                                         <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="w-100 justify-content-between">
-                                                <img src="upload/small_07.jpg" alt="" class="img-fluid float-left">
+                                                <img src="{{ asset('assets/markedia/upload/small_07.jpg') }}" alt="small_07" class="img-fluid float-left">
                                                 <h5 class="mb-1">5 Beautiful buildings you need to before dying</h5>
                                                 <small>12 Jan, 2016</small>
                                             </div>
@@ -327,7 +327,7 @@
 
                                         <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="w-100 justify-content-between">
-                                                <img src="upload/small_08.jpg" alt="" class="img-fluid float-left">
+                                                <img src="{{ asset('assets/markedia/upload/small_08.jpg') }}" alt="small_08" class="img-fluid float-left">
                                                 <h5 class="mb-1">Let's make an introduction for creative life</h5>
                                                 <small>11 Jan, 2016</small>
                                             </div>
@@ -335,7 +335,7 @@
 
                                         <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="w-100 last-item justify-content-between">
-                                                <img src="upload/small_09.jpg" alt="" class="img-fluid float-left">
+                                                <img src="{{ asset('assets/markedia/upload/small_09.jpg') }}" alt="small_09" class="img-fluid float-left">
                                                 <h5 class="mb-1">Did you see the most beautiful sea in the world?</h5>
                                                 <small>07 Jan, 2016</small>
                                             </div>
@@ -348,7 +348,7 @@
                                 <h2 class="widget-title">Advertising</h2>
                                 <div class="banner-spot clearfix">
                                     <div class="banner-img">
-                                        <img src="upload/banner_03.jpg" alt="" class="img-fluid">
+                                        <img src="{{ asset('assets/markedia/upload/banner_03.jpg') }}" alt="banner_03" class="img-fluid">
                                     </div><!-- end banner-img -->
                                 </div><!-- end banner -->
                             </div><!-- end widget -->
@@ -356,15 +356,15 @@
                             <div class="widget">
                                 <h2 class="widget-title">Instagram Feed</h2>
                                 <div class="instagram-wrapper clearfix">
-                                    <a class="" href="#"><img src="upload/small_09.jpg" alt="" class="img-fluid"></a>
-                                    <a href="#"><img src="upload/small_01.jpg" alt="" class="img-fluid"></a>
-                                    <a href="#"><img src="upload/small_02.jpg" alt="" class="img-fluid"></a>
-                                    <a href="#"><img src="upload/small_03.jpg" alt="" class="img-fluid"></a>
-                                    <a href="#"><img src="upload/small_04.jpg" alt="" class="img-fluid"></a>
-                                    <a href="#"><img src="upload/small_05.jpg" alt="" class="img-fluid"></a>
-                                    <a href="#"><img src="upload/small_06.jpg" alt="" class="img-fluid"></a>
-                                    <a href="#"><img src="upload/small_07.jpg" alt="" class="img-fluid"></a>
-                                    <a href="#"><img src="upload/small_08.jpg" alt="" class="img-fluid"></a>
+                                    <a class="" href="#"><img src="{{ asset('assets/markedia/upload/small_09.jpg') }}" alt="small_09" class="img-fluid"></a>
+                                    <a href="#"><img src="{{ asset('assets/markedia/upload/small_01.jpg') }}" alt="small_01" class="img-fluid"></a>
+                                    <a href="#"><img src="{{ asset('assets/markedia/upload/small_02.jpg') }}" alt="small_02" class="img-fluid"></a>
+                                    <a href="#"><img src="{{ asset('assets/markedia/upload/small_03.jpg') }}" alt="small_03" class="img-fluid"></a>
+                                    <a href="#"><img src="{{ asset('assets/markedia/upload/small_04.jpg') }}" alt="small_04" class="img-fluid"></a>
+                                    <a href="#"><img src="{{ asset('assets/markedia/upload/small_05.jpg') }}" alt="small_05" class="img-fluid"></a>
+                                    <a href="#"><img src="{{ asset('assets/markedia/upload/small_06.jpg') }}" alt="small_06" class="img-fluid"></a>
+                                    <a href="#"><img src="{{ asset('assets/markedia/upload/small_07.jpg') }}" alt="small_07" class="img-fluid"></a>
+                                    <a href="#"><img src="{{ asset('assets/markedia/upload/small_08.jpg') }}" alt="small_08" class="img-fluid"></a>
                                 </div><!-- end Instagram wrapper -->
                             </div><!-- end widget -->
 
@@ -398,7 +398,7 @@
                                 <div class="list-group">
                                     <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                         <div class="w-100 justify-content-between">
-                                            <img src="upload/small_04.jpg" alt="" class="img-fluid float-left">
+                                            <img src="{{ asset('assets/markedia/upload/small_04.jpg') }}" alt="small_04" class="img-fluid float-left">
                                             <h5 class="mb-1">5 Beautiful buildings you need to before dying</h5>
                                             <small>12 Jan, 2016</small>
                                         </div>
@@ -406,7 +406,7 @@
 
                                     <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                         <div class="w-100 justify-content-between">
-                                            <img src="upload/small_05.jpg" alt="" class="img-fluid float-left">
+                                            <img src="{{ asset('assets/markedia/upload/small_05.jpg') }}" alt="small_05" class="img-fluid float-left">
                                             <h5 class="mb-1">Let's make an introduction for creative life</h5>
                                             <small>11 Jan, 2016</small>
                                         </div>
@@ -414,7 +414,7 @@
 
                                     <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                         <div class="w-100 last-item justify-content-between">
-                                            <img src="upload/small_06.jpg" alt="" class="img-fluid float-left">
+                                            <img src="{{ asset('assets/markedia/upload/small_06.jpg') }}" alt="small_06" class="img-fluid float-left">
                                             <h5 class="mb-1">Did you see the most beautiful sea in the world?</h5>
                                             <small>07 Jan, 2016</small>
                                         </div>
@@ -431,7 +431,7 @@
                                 <div class="list-group">
                                     <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                         <div class="w-100 justify-content-between">
-                                            <img src="upload/small_01.jpg" alt="" class="img-fluid float-left">
+                                            <img src="{{ asset('assets/markedia/upload/small_01.jpg') }}" alt="small_01" class="img-fluid float-left">
                                             <h5 class="mb-1">Banana-chip chocolate cake recipe with customs</h5>
                                             <span class="rating">
                                                 <i class="fa fa-star"></i>
@@ -445,7 +445,7 @@
 
                                     <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                         <div class="w-100 justify-content-between">
-                                            <img src="upload/small_02.jpg" alt="" class="img-fluid float-left">
+                                            <img src="{{ asset('assets/markedia/upload/small_02.jpg') }}" alt="small_02" class="img-fluid float-left">
                                             <h5 class="mb-1">10 practical ways to choose organic vegetables</h5>
                                             <span class="rating">
                                                 <i class="fa fa-star"></i>
@@ -459,7 +459,7 @@
 
                                     <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                         <div class="w-100 last-item justify-content-between">
-                                            <img src="upload/small_03.jpg" alt="" class="img-fluid float-left">
+                                            <img src="{{ asset('assets/markedia/upload/small_03.jpg') }}" alt="small_03" class="img-fluid float-left">
                                             <h5 class="mb-1">We are making homemade ravioli, nice and good</h5>
                                             <span class="rating">
                                                 <i class="fa fa-star"></i>
@@ -509,11 +509,11 @@
 
     <!-- Core JavaScript
     ================================================== -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/tether.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/animate.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{ asset('assets/markedia/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/markedia/js/tether.min.js') }}"></script>
+    <script src="{{ asset('assets/markedia/js/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/markedia/js/animate.js"') }}"></script>
+    <script src="{{ asset('assets/markedia/js/custom.js') }}"></script>
 
 </body>
 </html>
