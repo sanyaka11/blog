@@ -42,7 +42,7 @@
         <img src="{{ $post->getImage() }}" alt="" class="img-fluid">
     </div>
 
-    <div class="blog-content mb-3">
+    <div class="blog-content mb-3 text-break">
         {!! nl2br(e($post->content)) !!}
     </div>
 

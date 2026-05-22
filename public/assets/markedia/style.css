@@ -1682,3 +1682,13 @@ hr.invis3 {
 .list-group-item-action:hover h5 {
     color: #0a58ca; 
 }
+
+.market-header .form-inline .form-control.is-invalid {
+    border: 2px solid red;
+}
+
+.blog-content {
+    overflow-wrap: break-word; 
+    word-break: break-word;    
+    hyphens: auto;              
+}

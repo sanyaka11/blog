@@ -57,6 +57,13 @@ class Post extends Model
 
     public function getPostDate()
     {
-       return Carbon::createFromFormat('Y-m-d H:i:s', $this->created_at)->format('d F, Y'); 
+        return Carbon::createFromFormat('Y-m-d H:i:s', $this->created_at)->format('d F, Y');
+    }
+
+    public function scopeLike($query, $search)
+    {
+        return $query->where('title', 'like', "%{$search}%")
+            ->orWhere('description', 'like', "%{$search}%")
+            ->orWhere('content', 'like', "%{$search}%");
     }
 }

@@ -1,43 +1,39 @@
 @extends('layouts.app')
 
-@section('title', 'Markedia - Blog')
+@section('title', 'Markedia - Search')
 
 @php
-    $hideSubscribe = true; 
+$sidebarLeft = true;
 @endphp
 
-@section('hero')
-<section id="cta" class="section">
+@section('page-title')
+<div class="page-title db">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-12 align-self-center">
-                <h2>A digital marketing blog</h2>
-                <p class="lead"> Aenean ut hendrerit nibh. Duis non nibh id tortor consequat cursus at mattis felis. Praesent sed lectus et neque auctor dapibus in non velit. Donec faucibus odio semper risus rhoncus rutrum. Integer et ornare mauris.</p>
-                <a href="#" class="btn btn-primary">Try for free</a>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <h2>Search: {{ $s }}</h2>
             </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="newsletter-widget text-center align-self-center">
-                    <h3>Subscribe Today!</h3>
-                    <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
-                    <form class="form-inline">
-                        <input type="text" name="email" placeholder="Add your email here.." required class="form-control" />
-                        <input type="submit" value="Subscribe" class="btn btn-default btn-block" />
-                    </form>
-                </div><!-- end newsletter -->
+            <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                    <li class="breadcrumb-item active">Search</li>
+                </ol>
             </div>
         </div>
     </div>
-</section>
+</div>
 @endsection
 
 @section('content')
 <div class="page-wrapper">
     <div class="blog-custom-build">
+
+        @if ($posts->count())
         @foreach ($posts as $post)
         <div class="blog-box wow fadeIn">
             <div class="post-media">
                 <a href="{{ route('posts.single', ['slug' => $post->slug]) }}" title="">
-                    <img src="{{ $post->getImage() }}" alt="market_blog" class="img-fluid">
+                    <img src="{{ $post->getImage() }}" alt="" class="img-fluid">
                     <div class="hovereffect">
                         <span></span>
                     </div>
@@ -54,25 +50,28 @@
                 <h4><a href="{{ route('posts.single', ['slug' => $post->slug]) }}" title="">{{ $post->title }}</a></h4>
                 {!! $post->description !!}
                 <div class="mb-3"></div>
-                <small>
-                    <a href="{{ route('categories.single', ['slug' => $post->category->slug]) }}" title="">
-                        {{ $post->category->title }}
-                    </a>
-                </small>
+                <small><a href="{{ route('categories.single', ['slug' => $post->category->slug]) }}" title="">{{ $post->category->title }}</a></small>
                 <small>{{ $post->getPostDate() }}</small>
+                <small><a href="#" title="">by {{ $post->user->name ?? 'Author' }}</a></small>
                 <small><i class="fa fa-eye"></i> {{ $post->views }}</small>
             </div>
         </div>
         <hr class="invis">
         @endforeach
+        @else
+        По вашему запросу ничего не найдено...
+        @endif
+
     </div>
 </div>
 
 <hr class="invis">
 
 <div class="row">
-    <div class="col-md-12 pagination justify-content-center">
-        {{ $posts->links() }}
+    <div class="col-md-12">
+        <nav aria-label="Page navigation">
+            {{ $posts->appends(['s' => request()->s])->links() }}
+        </nav>
     </div>
 </div>
 @endsection
